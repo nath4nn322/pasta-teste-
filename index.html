@@ -1,139 +1,130 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=<!DOCTYPE html>
-    <html lang="pt-br">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Preparação para Vestibular</title>
-        <style>
-            :root {
-                --bg-color: #ffffff;
-                --text-color: #333333;
-                --primary-color: #6200ee;
-            }
-            
-            .dark-mode {
-                --bg-color: #121212;
-                --text-color: #f5f5f5;
-                --primary-color: #bb86fc;
-            }
-            
-            body {
-                background-color: var(--bg-color);
-                color: var(--text-color);
-                font-family: Arial, sans-serif;
-                transition: background-color 0.3s, color 0.3s;
-                margin: 0;
-                padding: 20px;
-                line-height: 1.6;
-            }
-            
-            h1, h2 {
-                color: var(--primary-color);
-            }
-            
-            .theme-toggle-container {
-                text-align: center;
-                margin-top: 40px;
-                padding: 20px 0;
-                border-top: 1px solid #ccc;
-            }
-            
-            #themeToggle {
-                background-color: var(--primary-color);
-                color: white;
-                border: none;
-                padding: 10px 20px;
-                border-radius: 5px;
-                cursor: pointer;
-                font-size: 16px;
-                transition: transform 0.2s;
-            }
-            
-            #themeToggle:hover {
-                transform: scale(1.05);
-            }
-            
-            .container {
-                max-width: 800px;
-                margin: 0 auto;
-            }
-            
-            img {
-                max-width: 100%;
-                height: auto;
-                display: block;
-                margin: 15px 0;
-                border-radius: 5px;
-            }
-            
-            ul {
-                padding-left: 20px;
-            }
-            
-            li {
-                margin-bottom: 8px;
-            }
-        </style>
-    </head>
-    <body>
-        <div class="container">
-            <h1>Como se preparar para o vestibular</h1>
-            <h2>Rotina ideal para um vestibulando</h2>
-            <p>A primeira coisa que devemos ter em mente é que o vestibular é uma prova que testa os conhecimentos gerais e escolares, onde são requisitados os conhecimentos de: Língua Portuguesa, Matemática, História, Geografia, Língua estrangeira, Biologia, Física, Química e Redação.</p>
-            
-            <p>Para termos condições de passar no concurso desejado, além de estudar, devemos ter alguns cuidados na rotina, sendo alguns deles:</p>
-            
-            <img src="" alt="Estudante se preparando para vestibular">
-            
-            <ul>
-                <li>Organização do tempo</li>
-                <li>Boas noites de sono</li>
-                <li>Cronograma de afazeres do dia (que horas acorda, come, estuda...)</li>
-                <li>Boa alimentação</li>
-                <li>Paciência</li>
-                <li>...</li>
-            </ul>
-            
-            <p>Após ter isso planejado e arrumado, é preciso ter um ponto de partida, ele determinará em qual ponto você está apto para começar os estudos. Isso pode ser descoberto com resoluções de testes, que vão dos mais simples ao mais complexo.</p>
-            
-            <div class="theme-toggle-container">
-                <button id="themeToggle">Alternar para Modo Escuro</button>
-            </div>
-        </div>
-    
-        <script>
-            const themeToggle = document.getElementById('themeToggle');
-            const body = document.body;
-            
-            // Verifica se há preferência salva no localStorage
-            const savedTheme = localStorage.getItem('theme');
-            if (savedTheme === 'dark') {
-                body.classList.add('dark-mode');
-                themeToggle.textContent = 'Alternar para Modo Claro';
-            }
-            
-            themeToggle.addEventListener('click', () => {
-                body.classList.toggle('dark-mode');
-                
-                // Atualiza o texto do botão e salva a preferência
-                if (body.classList.contains('dark-mode')) {
-                    themeToggle.textContent = 'Alternar para Modo Claro';
-                    localStorage.setItem('theme', 'dark');
-                } else {
-                    themeToggle.textContent = 'Alternar para Modo Escuro';
-                    localStorage.setItem('theme', 'light');
-                }
-            });
-        </script>
-    </body>
-    </html>, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preparação para Vestibular</title>
+    <style>
+        :root {
+            --bg-color: #ffffff;
+            --text-color: #333333;
+            --primary-color: #6200ee;
+        }
+        
+        .dark-mode {
+            --bg-color: #121212;
+            --text-color: #f5f5f5;
+            --primary-color: #bb86fc;
+        }
+        
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: Arial, sans-serif;
+            transition: background-color 0.3s, color 0.3s;
+            margin: 0;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        
+        h1, h2 {
+            color: var(--primary-color);
+        }
+        
+        .theme-toggle-container {
+            text-align: center;
+            margin-top: 40px;
+            padding: 20px 0;
+            border-top: 1px solid #ccc;
+        }
+        
+        #themeToggle {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: transform 0.2s;
+        }
+        
+        #themeToggle:hover {
+            transform: scale(1.05);
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 20px auto;
+            border-radius: 5px;
+        }
+        
+        ul {
+            padding-left: 20px;
+            margin-bottom: 20px;
+        }
+        
+        li {
+            margin-bottom: 8px;
+        }
+    </style>
 </head>
 <body>
-    
+    <div class="container">
+        <h1>Como se preparar para o vestibular</h1>
+        <h2>Rotina ideal para um vestibulando</h2>
+        <p>A primeira coisa que devemos ter em mente é que o vestibular é uma prova que testa os conhecimentos gerais e escolares, onde são requisitados os conhecimentos de: Língua Portuguesa, Matemática, História, Geografia, Língua estrangeira, Biologia, Física, Química e Redação.</p>
+        
+        <p>Para termos condições de passar no concurso desejado, além de estudar, devemos ter alguns cuidados na rotina, sendo alguns deles:</p>
+        
+        <ul>
+            <li>Organização do tempo</li>
+            <li>Boas noites de sono</li>
+            <li>Cronograma de afazeres do dia (que horas acorda, come, estuda...)</li>
+            <li>Boa alimentação</li>
+            <li>Paciência</li>
+            <li>...</li>
+        </ul>
+        
+        <img src="download.jpg" alt="Estudante se preparando para vestibular">
+        
+        <p>Após ter isso planejado e arrumado, é preciso ter um ponto de partida, ele determinará em qual ponto você está apto para começar os estudos. Isso pode ser descoberto com resoluções de testes, que vão dos mais simples ao mais complexo.</p>
+        
+        <div class="theme-toggle-container">
+            <button id="themeToggle">Alternar para Modo Escuro</button>
+        </div>
+    </div>
+
+    <script>
+        const themeToggle = document.getElementById('themeToggle');
+        const body = document.body;
+        
+        // Verifica se há preferência salva no localStorage
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'dark') {
+            body.classList.add('dark-mode');
+            themeToggle.textContent = 'Alternar para Modo Claro';
+        }
+        
+        themeToggle.addEventListener('click', () => {
+            body.classList.toggle('dark-mode');
+            
+            // Atualiza o texto do botão e salva a preferência
+            if (body.classList.contains('dark-mode')) {
+                themeToggle.textContent = 'Alternar para Modo Claro';
+                localStorage.setItem('theme', 'dark');
+            } else {
+                themeToggle.textContent = 'Alternar para Modo Escuro';
+                localStorage.setItem('theme', 'light');
+            }
+        });
+    </script>
 </body>
 </html>
