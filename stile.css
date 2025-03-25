@@ -9,7 +9,7 @@
 
 /* ===== VARIÁVEIS DO MODO ESCURO ===== */
 .dark-mode {
-    --bg-color: #121212;       /* Cor de fundo (escuro) */
+    --bg-color: #121212;       (Adicione outros elementos conforme necessário) */ /* Cor de fundo (escuro) */
     --text-color: #f5f5f5;     /* Cor do texto (claro) */
     --primary-color: #bb86fc;  /* Cor de destaques ajustada */
 }
