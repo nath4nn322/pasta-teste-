@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylstreet" href="style.css">
+    <link rel="stylstreet" href="style.css"
 </head>
 <body>
     <!DOCTYPE html>
@@ -14,77 +14,94 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Modo Claro/Escuro</title>
     <style>
-        :root {
-            --bg-color: #ffffff;
-            --text-color: #333333;
-            --primary-color: #6200ee;
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        
+        .light-mode {
+            background-color: #ffffff;
+            color: #333333;
         }
         
         .dark-mode {
-            --bg-color: #121212;
-            --text-color: #f5f5f5;
-            --primary-color: #bb86fc;
+            background-color: #121212;
+            color: #f0f0f0;
         }
         
-        body {
-            background-color: var(--bg-color);
-            color: var(--text-color);
-            font-family: Arial, sans-serif;
-            transition: background-color 0.3s, color 0.3s;
-            margin: 0;
-            padding: 20px;
-        }
-        
-        h1 {
-            color: var(--primary-color);
-        }
-        
-        button {
-            background-color: var(--primary-color);
-            color: white;
+        .toggle-btn {
+            padding: 10px 15px;
             border: none;
-            padding: 10px 20px;
             border-radius: 5px;
             cursor: pointer;
-            font-size: 16px;
-            margin: 10px 0;
+            font-weight: bold;
+            transition: background-color 0.3s;
         }
         
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
+        .light-mode .toggle-btn {
+            background-color: #333333;
+            color: #ffffff;
+        }
+        
+        .dark-mode .toggle-btn {
+            background-color: #f0f0f0;
+            color: #333333;
+        }
+        
+        .content {
+            margin-top: 20px;
+            padding: 20px;
+            border-radius: 5px;
+        }
+        
+        .light-mode .content {
+            background-color: #f0f0f0;
+            border: 1px solid #ddd;
+        }
+        
+        .dark-mode .content {
+            background-color: #1e1e1e;
+            border: 1px solid #333;
         }
     </style>
 </head>
-<body>
-    <div class="container">
+<body class="light-mode">
+    <button class="toggle-btn" onclick="toggleDarkMode()">Modo Escuro</button>
+    
+    <div class="content">
         <h1>Modo Claro/Escuro</h1>
-        <button id="themeToggle">Alternar para Modo Escuro</button>
-        
-        <p>O modo escuro é mais suave para os olhos em ambientes com pouca luz.</p>
+        <p>Alternar entre os modos claro e escuro em uma página web.</p>
+        <p>Clique no botão acima para alternar entre os temas.</p>
     </div>
 
     <script>
-        const themeToggle = document.getElementById('themeToggle');
-        const body = document.body;
-        
-        // Verifica se há preferência salva no localStorage
-        const savedTheme = localStorage.getItem('theme');
-        if (savedTheme === 'dark') {
-            body.classList.add('dark-mode');
-            themeToggle.textContent = 'Alternar para Modo Claro';
-        }
-        
-        themeToggle.addEventListener('click', () => {
-            body.classList.toggle('dark-mode');
+        function toggleDarkMode() {
+            const body = document.body;
+            const btn = document.querySelector('.toggle-btn');
             
-            // Atualiza o texto do botão e salva a preferência
-            if (body.classList.contains('dark-mode')) {
-                themeToggle.textContent = 'Alternar para Modo Claro';
+            if (body.classList.contains('light-mode')) {
+                body.classList.remove('light-mode');
+                body.classList.add('dark-mode');
+                btn.textContent = 'Modo Claro';
                 localStorage.setItem('theme', 'dark');
             } else {
-                themeToggle.textContent = 'Alternar para Modo Escuro';
+                body.classList.remove('dark-mode');
+                body.classList.add('light-mode');
+                btn.textContent = 'Modo Escuro';
                 localStorage.setItem('theme', 'light');
+            }
+        }
+        
+        document.addEventListener('DOMContentLoaded', () => {
+            const savedTheme = localStorage.getItem('theme');
+            const btn = document.querySelector('.toggle-btn');
+            
+            if (savedTheme === 'dark') {
+                document.body.classList.remove('light-mode');
+                document.body.classList.add('dark-mode');
+                btn.textContent = 'Modo Claro';
             }
         });
     </script>
