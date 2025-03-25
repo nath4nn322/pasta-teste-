@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=<!DOCTYPE html>
     <html lang="pt-br">
-    <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="style.css">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -34,6 +34,7 @@
                 cursor: pointer;
                 font-weight: bold;
                 transition: background-color 0.3s;
+                margin: 15px 0;
             }
             
             .light-mode .toggle-btn {
@@ -47,7 +48,7 @@
             }
             
             .content {
-                margin-top: 20px;
+                margin-top: 10px;
                 padding: 20px;
                 border-radius: 5px;
             }
@@ -61,15 +62,18 @@
                 background-color: #1e1e1e;
                 border: 1px solid #333;
             }
+            
+            h1 {
+                margin-bottom: 20px;
+            }
         </style>
     </head>
     <body class="light-mode">
-        <button class="toggle-btn" onclick="toggleDarkMode()">Modo Escuro</button>
-        
         <div class="content">
             <h1>Modo Claro/Escuro</h1>
+            <button class="toggle-btn" onclick="toggleDarkMode()">Modo Escuro</button>
             <p>Alternar entre os modos claro e escuro em uma página web.</p>
-            <p>Clique no botão acima para alternar entre os temas.</p>
+            <p>Clique no botão para alternar entre os temas.</p>
         </div>
     
         <script>
