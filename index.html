@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modo Claro/Escuro</title>
+    <style>
+        :root {
+            --bg-color: #ffffff;
+            --text-color: #333333;
+            --primary-color: #6200ee;
+        }
+        
+        .dark-mode {
+            --bg-color: #121212;
+            --text-color: #f5f5f5;
+            --primary-color: #bb86fc;
+        }
+        
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: Arial, sans-serif;
+            transition: background-color 0.3s, color 0.3s;
+            margin: 0;
+            padding: 20px;
+        }
+        
+        h1 {
+            color: var(--primary-color);
+        }
+        
+        button {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin: 10px 0;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Exemplo de Modo Claro/Escuro</h1>
+        <button id="themeToggle">Alternar para Modo Escuro</button>
+        
+        <p>Este é um exemplo de texto que mudará de cor quando o tema for alterado.</p>
+        <p>O modo escuro é mais suave para os olhos em ambientes com pouca luz.</p>
+    </div>
+
+    <script>
+        const themeToggle = document.getElementById('themeToggle');
+        const body = document.body;
+        
+        // Verifica se há preferência salva no localStorage
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'dark') {
+            body.classList.add('dark-mode');
+            themeToggle.textContent = 'Alternar para Modo Claro';
+        }
+        
+        themeToggle.addEventListener('click', () => {
+            body.classList.toggle('dark-mode');
+            
+            // Atualiza o texto do botão e salva a preferência
+            if (body.classList.contains('dark-mode')) {
+                themeToggle.textContent = 'Alternar para Modo Claro';
+                localStorage.setItem('theme', 'dark');
+            } else {
+                themeToggle.textContent = 'Alternar para Modo Escuro';
+                localStorage.setItem('theme', 'light');
+            }
+        });
+    </script>
+</body>
+</html>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<head>
+    <style>
+        /* ===== VARIÁVEIS GLOBAIS (modo claro padrão) ===== */
+:root {
+    --bg-color: #ffffff;       /* Cor de fundo (claro) */
+    --text-color: #333333;     /* Cor do texto (escuro) */
+    --primary-color: #6200ee;  /* Cor de destaques (botões, links) */
+}
+
+/* ===== VARIÁVEIS DO MODO ESCURO ===== */
+.dark-mode {
+    --bg-color: #121212;       /* Cor de fundo (escuro) */
+    --text-color: #f5f5f5;     /* Cor do texto (claro) */
+    --primary-color: #bb86fc;  /* Cor de destaques ajustada */
+}
+
+/* ===== APLICAÇÃO DAS VARIÁVEIS ===== */
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background-color 0.3s, color 0.3s; /* Animação suave */
+}
+
+/* Exemplo: estilizando botões e títulos */
+button {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+}
+
+h1, h2, h3 {
+    color: var(--primary-color);
+}
+
+/* (Adicione outros elementos conforme necessário) */
+    </style>
+</head>
